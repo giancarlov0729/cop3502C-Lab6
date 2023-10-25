@@ -6,6 +6,9 @@ def print_menu():
     print("2. Decode password")
     print("3. Quit")
 
+    print('')
+
+
 def encode(password):
     encoded = ''
     for char in password:
@@ -15,6 +18,16 @@ def encode(password):
 if __name__ == '__main__':
     password = input("Please enter a password: ")
     print('')
+    print_menu()
+    choice = int(input('Please make a selection: '))
+
+    if choice == 1:
+        password = encode(password)
+    if choice == 2:
+        password = decode(password)
+    if choice == 3:
+        print('Thank You. Goodbye!')
+
 
 
 
